@@ -1,0 +1,27 @@
+---
+title: Hello World — MDX
+description: An example MDX post rendered via Contentlayer.
+date: 2025-10-22
+---
+
+export const Note = () => (
+  <div className="p-4 rounded-lg bg-indigo-50 text-indigo-800 dark:bg-indigo-900/40 dark:text-indigo-200">
+    Inline React component inside MDX.
+  </div>
+)
+
+# Hello, MDX 👋
+
+This is an example blog post written in MDX and indexed automatically by Contentlayer.
+
+- Statically rendered with Next.js App Router.
+- Frontmatter powers the index and metadata.
+- Supports GitHub-flavored markdown (tables, task lists) and slugs.
+
+```tsx
+export default function Example() {
+  return <div className="text-sm opacity-80">Code blocks are highlighted by your theme.</div>
+}
+```
+
+<Note />

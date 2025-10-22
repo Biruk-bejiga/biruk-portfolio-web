@@ -1,5 +1,6 @@
 {
   "compilerOptions": {
+    "baseUrl": ".",
     "lib": [
       "dom",
       "dom.iterable",
@@ -20,6 +21,9 @@
     "paths": {
       "@/*": [
         "./src/*"
+      ],
+      "contentlayer/generated": [
+        "./.contentlayer/generated"
       ]
     },
     "plugins": [
@@ -32,7 +36,8 @@
     "next-env.d.ts",
     "**/*.ts",
     "**/*.tsx",
-    ".next/types/**/*.ts"
+    ".next/types/**/*.ts",
+    ".contentlayer/generated"
   ],
   "exclude": [
     "node_modules"

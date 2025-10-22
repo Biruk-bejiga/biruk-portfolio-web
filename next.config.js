@@ -1,13 +1,12 @@
 const { withContentlayer } = require('next-contentlayer')
-const withMDX = require('@next/mdx')({ extension: /\.mdx?$/ })
 
 /** @type {import('next').NextConfig} */
 const nextConfig = {
   reactStrictMode: true,
-  pageExtensions: ['ts', 'tsx', 'mdx'],
+  // Using Contentlayer for MDX content, no page-level MDX compilation needed
   images: {
     remotePatterns: [{ protocol: 'https', hostname: '**' }],
   },
 }
 
-module.exports = withContentlayer(withMDX(nextConfig))
+module.exports = withContentlayer(nextConfig)
