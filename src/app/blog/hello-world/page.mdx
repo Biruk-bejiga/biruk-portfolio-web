@@ -1,0 +1,23 @@
+---
+# MDX front matter is ignored by Next.js App Router by default. Keep content simple below.
+---
+
+export const metadata = {
+  title: 'Hello World — MDX',
+  description: 'An example MDX post rendered by Next.js App Router.',
+}
+
+# Hello, MDX 👋
+
+This is an example blog post written in **MDX**.
+
+- It is statically rendered.
+- You can embed React components if desired.
+
+```tsx
+export default function Note() {
+  return <div className="p-4 rounded-lg bg-indigo-50 text-indigo-800">Inline React component inside MDX.</div>
+}
+```
+
+<Note />

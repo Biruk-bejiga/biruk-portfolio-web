@@ -6,9 +6,10 @@ import { ModeToggle } from './mode-toggle'
 import { site } from '../data/site'
 
 const links = [
-  { href: '#about', label: 'About' },
+  { href: '#stats', label: 'Stats' },
   { href: '#projects', label: 'Projects' },
-  { href: '#services', label: 'Services' },
+  { href: '#testimonials', label: 'Testimonials' },
+  { href: '/blog', label: 'Blog', external: false },
   { href: '#contact', label: 'Contact' },
 ]
 
@@ -16,7 +17,9 @@ export default function Navbar() {
   const [active, setActive] = useState<string>('')
 
   useEffect(() => {
-    const sectionIds = links.map(l => l.href.replace('#', ''))
+    const sectionIds = links
+      .filter(l => l.href.startsWith('#'))
+      .map(l => l.href.replace('#', ''))
     const sections = sectionIds
       .map(id => document.getElementById(id))
       .filter((el): el is HTMLElement => Boolean(el))
@@ -44,7 +47,8 @@ export default function Navbar() {
         </Link>
         <nav className="hidden md:flex gap-6">
           {links.map((l) => {
-            const isActive = active === l.href.replace('#', '')
+            const isAnchor = l.href.startsWith('#')
+            const isActive = isAnchor && active === l.href.replace('#', '')
             return (
               <Link
                 key={l.href}
