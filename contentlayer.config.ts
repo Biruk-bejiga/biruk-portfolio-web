@@ -1,6 +1,5 @@
 import { defineDocumentType, makeSource } from 'contentlayer/source-files'
 import rehypeSlug from 'rehype-slug'
-import remarkGfm from 'remark-gfm'
 
 export const Post = defineDocumentType(() => ({
   name: 'Post',
@@ -29,7 +28,9 @@ export default makeSource({
   contentDirPath: 'content',
   documentTypes: [Post],
   mdx: {
-    remarkPlugins: [remarkGfm],
+    // Temporarily omit remark-gfm due to a parser/runtime mismatch on Windows builds.
+    // If you rely on GitHub-flavored markdown (tables, task lists), we can re-enable
+    // remark-gfm after aligning plugin versions or applying a targeted fix.
     rehypePlugins: [rehypeSlug],
   },
   disableImportAliasWarning: true,
