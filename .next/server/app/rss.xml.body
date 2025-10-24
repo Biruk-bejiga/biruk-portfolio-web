@@ -1,0 +1,40 @@
+<?xml version="1.0" encoding="UTF-8"?>
+  <rss version="2.0">
+    <channel>
+      <title>Biruk Bejiga — Blog</title>
+      <link>https://example.com</link>
+      <description>Building modern, scalable, and creative digital experiences.</description>
+      <language>en-us</language>
+      <lastBuildDate>Fri, 24 Oct 2025 06:58:09 GMT</lastBuildDate>
+      
+        <item>
+          <title>Hello World — MDX</title>
+          <link>https://example.com/blog/hello-world</link>
+          <guid>https://example.com/blog/hello-world</guid>
+          <description>An example MDX post rendered via Contentlayer.</description>
+          <pubDate>Wed, 22 Oct 2025 00:00:00 GMT</pubDate>
+          <category>intro</category><category>mdx</category>
+        </item>
+      
+
+        <item>
+          <title>Optimizing Images in Next.js</title>
+          <link>https://example.com/blog/optimizing-nextjs-images</link>
+          <guid>https://example.com/blog/optimizing-nextjs-images</guid>
+          <description>Practical tips for image optimization with next/image and modern formats.</description>
+          <pubDate>Wed, 10 Sep 2025 00:00:00 GMT</pubDate>
+          <category>nextjs</category><category>performance</category><category>images</category>
+        </item>
+      
+
+        <item>
+          <title>Motion and Micro-Interactions That Feel Right</title>
+          <link>https://example.com/blog/motion-ux-best-practices</link>
+          <guid>https://example.com/blog/motion-ux-best-practices</guid>
+          <description>Balancing delight and performance with Framer Motion and CSS.</description>
+          <pubDate>Sat, 02 Aug 2025 00:00:00 GMT</pubDate>
+          <category>ux</category><category>animation</category><category>framer-motion</category>
+        </item>
+      
+    </channel>
+  </rss>

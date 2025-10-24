@@ -19,6 +19,8 @@ html, body {
 body {
   background-color: rgb(var(--background));
   color: rgb(var(--foreground));
+  /* Prevent accidental horizontal scrolling on small screens */
+  overflow-x: hidden;
 }
 
 /* Smooth scrolling for in-page anchor links */
@@ -33,4 +35,10 @@ html {
 
 .glow-border {
   box-shadow: 0 0 20px rgba(99,102,241, 0.25);
+}
+
+/* Ensure media scales down on mobile */
+img, video, svg, canvas {
+  max-width: 100%;
+  height: auto;
 }
