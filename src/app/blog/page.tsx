@@ -1,5 +1,6 @@
 import Link from 'next/link'
 import { allPosts } from 'contentlayer/generated'
+import { Rss } from 'lucide-react'
 
 export const metadata = {
   title: 'Blog',
@@ -19,7 +20,18 @@ export default function BlogIndex({ searchParams }: { searchParams?: SearchParam
 
   return (
     <section className="py-24">
-      <h1 className="text-3xl md:text-4xl font-bold">Blog</h1>
+      <div className="flex flex-col sm:flex-row sm:items-center sm:justify-between gap-3">
+        <h1 className="text-3xl md:text-4xl font-bold">Blog</h1>
+        <Link
+          href="/rss.xml"
+          prefetch={false}
+          className="inline-flex items-center justify-center gap-2 rounded-md border border-black/10 dark:border-white/10 px-3 py-1.5 text-sm hover:bg-gray-100 dark:hover:bg-gray-800"
+          aria-label="Subscribe via RSS"
+        >
+          <Rss className="h-4 w-4" />
+          <span>Subscribe via RSS</span>
+        </Link>
+      </div>
 
       {/* Tag filters */}
       {allTags.length > 0 && (
